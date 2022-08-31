@@ -5,7 +5,7 @@ namespace pages;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\FieldList;
-use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\TextField;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Versioned\Versioned;
 
@@ -54,14 +54,15 @@ class StoryboardObj extends DataObject
 
     public function getCMSFields()
     {
+
+        $text = new TextField('ImageTitle', "ImageTitle");
+        $text->setDescription('ImageTitle of upload.');
+
         $image = new UploadField('StoryboardObj', 'StoryboardObj');
         $image->allowedExtensions = array('jpg', 'png');
         $image->setFolderName('Storyboard');
 
-        $text = new TextareaField('ImageTitle', "ImageTitle");
-        $text->setDescription('ImageTitle of upload.');
-
-        $fields = new FieldList($image, $text);
+        $fields = new FieldList($text, $image);
 
         return $fields;
     }
