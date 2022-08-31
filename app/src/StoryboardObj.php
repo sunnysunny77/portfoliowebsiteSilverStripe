@@ -33,13 +33,13 @@ class StoryboardObj extends DataObject
 
     private static $db = [
 
-        'Title' => 'Text',
+        'ImageTitle' => 'Text',
     ];
 
     private static $summary_fields = [
         'GridThumbnail' => '',
         'StoryboardObj.Filename' => 'Image file name',
-        'Title' => 'title',
+        'ImageTitle' => 'ImageTitle',
 
     ];
 
@@ -58,8 +58,8 @@ class StoryboardObj extends DataObject
         $image->allowedExtensions = array('jpg', 'png');
         $image->setFolderName('Storyboard');
 
-        $text = new TextareaField('Title', "Title");
-        $text->setDescription('Title of upload.');
+        $text = new TextareaField('ImageTitle', "ImageTitle");
+        $text->setDescription('ImageTitle of upload.');
 
         $fields = new FieldList($image, $text);
 

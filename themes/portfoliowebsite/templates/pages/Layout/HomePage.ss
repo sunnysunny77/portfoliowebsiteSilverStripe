@@ -166,8 +166,10 @@
                                     </i>
                                 </a>
                                 <% loop $StoryboardObjs %>
-                                    <div>   
-                                        <img class="gallery" src="$StoryboardObj.URL" width="$StoryboardObj.Width" height="$StoryboardObj.Height" loading="lazy" />  
+                                    <div>
+                                         
+                                        <img class="gallery" src="$StoryboardObj.URL" width="$StoryboardObj.Width" height="$StoryboardObj.Height" loading="lazy" alt="$ImageTitle" />
+      
                                     </div>
                                 <% end_loop %>
                             </section>
