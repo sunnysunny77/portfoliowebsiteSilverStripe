@@ -27,7 +27,7 @@ class CustomSiteConfig extends DataExtension
 
         if (!SiteTree::get_by_link("about")) {
 
-            $page = new ContactPage;
+            $page = new AboutPage;
             $page->Title = 'About';
             $page->ClassName = 'AboutPage';
             $page->URLSegment = 'about';

@@ -60,6 +60,3 @@
             </nav>
 
         </header>
-
-        <main id="main" class="grid-y">  
-

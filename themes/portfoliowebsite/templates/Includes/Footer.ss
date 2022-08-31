@@ -1,5 +1,3 @@
-    </main>
-
     <footer class="grid-x grid-padding-x align-justify">
 
         <ul class="cell shrink align-self-middle no-bullet inline-list">
