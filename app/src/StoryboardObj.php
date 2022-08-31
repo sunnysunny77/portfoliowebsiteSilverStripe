@@ -55,14 +55,14 @@ class StoryboardObj extends DataObject
     public function getCMSFields()
     {
 
-        $text = new TextField('ImageTitle', "ImageTitle");
+        $text = TextField::create('ImageTitle', "ImageTitle");
         $text->setDescription('ImageTitle of upload.');
 
-        $image = new UploadField('StoryboardObj', 'StoryboardObj');
+        $image = UploadField::create('StoryboardObj', 'StoryboardObj');
         $image->allowedExtensions = array('jpg', 'jpeg', 'png');
         $image->setFolderName('Storyboard');
 
-        $fields = new FieldList($text, $image);
+        $fields = FieldList::create($text, $image);
 
         return $fields;
     }
