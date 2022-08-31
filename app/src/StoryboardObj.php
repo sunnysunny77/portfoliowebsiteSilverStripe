@@ -37,10 +37,10 @@ class StoryboardObj extends DataObject
     ];
 
     private static $summary_fields = [
-        'GridThumbnail' => '',
-        'StoryboardObj.Filename' => 'Image file name',
-        'ImageTitle' => 'ImageTitle',
 
+        'ImageTitle' => 'ImageTitle',
+        'StoryboardObj.Filename' => 'Image file name',
+        'GridThumbnail' => '',
     ];
 
     public function getGridThumbnail()
