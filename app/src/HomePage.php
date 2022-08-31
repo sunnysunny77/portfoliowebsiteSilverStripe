@@ -30,7 +30,7 @@ class HomePage extends Page
             'Root.Main',
             GridField::create(
                 'StoryboardObjs',
-                'Gallery',
+                'Storyboard',
                 $this->StoryboardObjs(),
                 GridFieldConfig_RecordEditor::create()
             )

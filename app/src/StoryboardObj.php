@@ -59,7 +59,7 @@ class StoryboardObj extends DataObject
         $text->setDescription('ImageTitle of upload.');
 
         $image = new UploadField('StoryboardObj', 'StoryboardObj');
-        $image->allowedExtensions = array('jpg', 'png');
+        $image->allowedExtensions = array('jpg', 'jpeg', 'png');
         $image->setFolderName('Storyboard');
 
         $fields = new FieldList($text, $image);
