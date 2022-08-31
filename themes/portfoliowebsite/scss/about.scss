@@ -1,0 +1,103 @@
+@import "variables";
+/* about */
+
+.fi-pencil {
+    @include box(0 0 1rem 0, null);
+}
+
+.p-left,
+.p-right {
+    p {
+        @include medium_and_up {
+            @include setbox(null, null, 0, 0);
+        }
+    }
+    h3 {
+        @include medium_and_up {
+            @include setbox(null, null, 2rem 1rem 0 1rem, null);
+        }
+    }
+}
+
+.media-object {
+    @include setbox(null, null, null, auto);
+    @include medium_and_up() {
+        @include setbox(null, null, null, auto auto 50px auto);
+        box-shadow: 0 -1px rgba($color1, 0.1), 0 1px rgba($color1, 0.1);
+    }
+    .media-object-section {
+        &:nth-child(2) {
+            @include setbox(null, null, 0, null);
+            @include medium_and_up() {
+                @include setbox(null, null, 0 0 0 0.5rem, null);
+            }
+            h4 {
+                color: darkShift($color6);
+            }
+        }
+        &:nth-child(1) {
+            @include setbox(null, null, 0, null);
+            @include large_and_up() {
+                @include setbox(null, null, 3%, null);
+            }
+            img {
+                @include setbox(100%, null, null, auto auto 1rem auto);
+                @include medium_and_up() {
+                    @include setbox(calc(100% - 0.5rem), null, null, auto);
+                }
+                @include large_and_up() {
+                    @include setbox(100%, null, null, null);
+                }
+                border-radius: 17px;
+            }
+        }
+    }
+}
+
+.rel {
+    position: relative;
+}
+
+.stick {
+    position: sticky;
+    top: 1rem;
+    @include large_and_up() {
+        top: 15rem;
+    }
+}
+
+#stick-1 {
+    @include medium_and_up() {
+        box-sizing: border-box;
+        @include box(null, 0 1rem 0 0);
+    }
+}
+
+#stick-2 {
+    @include medium_and_up() {
+        @include box(null, 0 0 0 1rem);
+        box-sizing: border-box;
+    }
+}
+
+.card {
+    background-color: rgba($color6, 0.1);
+    border: none;
+    border-radius: 7px;
+    box-shadow: 1px 1px rgba($color1, 0.2), -1px -1px rgba($color1, 0.2);
+    .card-divider {
+        background-color: rgba($color6, 0.1);
+        font-size: larger;
+        color: $color1;
+    }
+    img {
+        @include setbox(100%, null, null, auto);
+        @include medium_and_up() {
+            border-radius: 2px;
+            @include setbox(77.859%, null, null, 1.5rem auto auto auto);
+        }
+    }
+    h5 {
+        font-size: 19.2px;
+    }
+}

@@ -30,7 +30,9 @@
         "expose": [
             "themes/portfoliowebsite/css",
             "themes/portfoliowebsite/js",
-            "themes/portfoliowebsite/images"
+            "themes/portfoliowebsite/images",
+            "node_modules/vivus/dist"
+
         ]
     },
     "config": {

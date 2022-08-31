@@ -1,0 +1,58 @@
+.top-bar {
+    background-image: url(../images/template/paper.png);
+    background-color: $color3;
+    background-blend-mode: screen;
+    .top-bar-right {
+        @include x_large_and_up {
+            @include box(auto calc(50vw - 960px) auto auto, null);
+        }
+        ul {
+            background: $transparent;
+            li a {
+                color: $color1;
+                @include box(null, 0.5rem);
+                &:hover,
+                &:focus {
+                    color: $white;
+                }
+            }
+        }
+    }
+    .top-bar-left {
+        @include x_large_and_up {
+            @include box(auto auto auto calc(50vw - 960px), null);
+        }
+        #my-svg {
+            display: inline-block;
+            @include setbox(235px, 100px, null, null);
+        }
+    }
+}
+
+.color {
+    color: $color1;
+}
+
+.title-bar {
+    background-image: url(../images/template/paper.png);
+    background-blend-mode: screen;
+    background-color: $color3;
+    position: relative;
+    z-index: 1;
+    .title-bar-title {
+        @include setbox(null, 50px, null, null);
+        color: $white;
+        font-size: 16px;
+        i {
+            position: absolute;
+            &:hover,
+            &:focus {
+                color: $color1;
+            }
+        }
+    }
+    #my-svg-m {
+        display: inline-block;
+        @include setbox(50px, 50px, null, null);
+    }
+}

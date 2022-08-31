@@ -1,0 +1,40 @@
+footer {
+    background-image: url(../images/template/paper.png);
+    background-blend-mode: screen;
+    @include box(null, 15px 0 0 0);
+    background-color: darkShift($color3);
+    color: $color1;
+    position: relative;
+    z-index: 1;
+    .menu li a {
+        color: $color1;
+        @include box(null, 0.5rem);
+        &:hover,
+        &:focus {
+            color: $white;
+        }
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+        background-image: url(../images/template/washi.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+    > ul.no-bullet {
+        @include x_large_and_up {
+            @include box(auto auto auto calc(50vw - 960px), null);
+        }
+    }
+    ul + ul.no-bullet {
+        font-size: smaller;
+        @include x_large_and_up {
+            @include box(auto calc(50vw - 960px) auto auto, null);
+        }
+    }
+}

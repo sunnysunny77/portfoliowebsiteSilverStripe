@@ -1,18 +1,19 @@
 <?php
 
 namespace pages;
-use SilverStripe\ORM\DataExtension;
+
 use SilverStripe\CMS\Model\SiteTree;
+use SilverStripe\ORM\DataExtension;
 
 class CustomSiteConfig extends DataExtension
 {
-    
+
     public function requireDefaultRecords()
     {
 
         parent::requireDefaultRecords();
 
-        if (!SiteTree::get_by_link("home")) { 
+        if (!SiteTree::get_by_link("home")) {
 
             $page = new HomePage;
             $page->Title = 'Home';
@@ -24,7 +25,7 @@ class CustomSiteConfig extends DataExtension
             $page->flushCache();
         }
 
-        if (!SiteTree::get_by_link("about")) { 
+        if (!SiteTree::get_by_link("about")) {
 
             $page = new ContactPage;
             $page->Title = 'About';
@@ -36,7 +37,7 @@ class CustomSiteConfig extends DataExtension
             $page->flushCache();
         }
 
-        if (!SiteTree::get_by_link("contact")) { 
+        if (!SiteTree::get_by_link("contact")) {
 
             $page = new ContactPage;
             $page->Title = 'Contact';

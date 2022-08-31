@@ -1,0 +1,86 @@
+@import "variables";
+/* contact */
+
+main a {
+    @extend %link;
+}
+
+.tabs {
+    background: $transparent;
+    border: none;
+    @include box(null, 0 0 1rem 0);
+    box-shadow: 0 1px rgba($color1, 0.1);
+    li {
+        background-color: rgba($color6, 0.1);
+        background-image: url(../images/template/paper.png);
+        background-blend-mode: screen;
+        a {
+            @include box(null, 1%);
+
+            h3 {
+                font-size: initial;
+                @include box();
+                @extend %link;
+            }
+        }
+    }
+    .tabs-title > a[aria-selected="true"] {
+        background: rgba($color6, 0.1);
+    }
+}
+
+.tabs-content {
+    background: $transparent;
+    border: none;
+    transition: none;
+    .is-active {
+        @include box(null, 1rem 0);
+    }
+    .button {
+        @extend %button;
+    }
+    textarea {
+        resize: none;
+    }
+    legend {
+        color: $color1;
+    }
+}
+
+#main form {
+    input,
+    textarea {
+        background-image: url(../images/template/paper.png);
+    }
+    input[type="submit"] {
+        @include setbox(80px, null, null, null);
+    }
+    input[type="submit"]:disabled {
+        opacity: 1;
+    }
+    textarea {
+        appearance: auto;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        scrollbar-color: $color3 rgba($color6, 0.25);
+        scrollbar-width: thin;
+        &::-webkit-scrollbar {
+            @include setbox(7px, null, null, null);
+        }
+        &::-webkit-scrollbar-thumb {
+            background: $color3;
+        }
+        &::-webkit-scrollbar-track {
+            background: rgba($color6, 0.25);
+        }
+        &::-webkit-scrollbar-thumb:hover,
+        &::-webkit-scrollbar-thumb:focus {
+            @extend ::-webkit-scrollbar-thumb;
+        }
+    }
+}
+
+blockquote,
+cite {
+    color: lightShift($color6);
+}

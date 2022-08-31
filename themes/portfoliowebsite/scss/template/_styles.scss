@@ -1,0 +1,79 @@
+/* template */
+
+body {
+    @include setbox(null, null, null, auto);
+    position: relative;
+    font-family: OpenSans-Regular;
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -999;
+        background-blend-mode: screen;
+        opacity: 0.75;
+        background-color: rgba($color3, 0.075);
+        background-image: url(../images/template/body-mobile.jpg);
+        background-position: center top;
+        background-size: contain;
+        @include large_and_up {
+            background-image: url(../images/template/body.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+h1 {
+    font-size: inherit;
+    @include box();
+    font-family: OpenSans-Regular;
+}
+
+h2 {
+    @include setbox(null, null, null, 1rem auto);
+    color: darkShift($color1);
+    font-family: Montserrat-Regular;
+    font-style: oblique;
+    text-shadow: 0 0 2.5px $color1;
+    @include medium_and_up() {
+        @include setbox(null, null, null, 50px auto);
+    }
+}
+
+h3,
+h4,
+h5 {
+    font-family: OpenSans-Regular;
+    color: darkShift($color1);
+}
+
+main {
+    min-height: 88vh;
+    @include x_large_and_up {
+        @include setbox(1920px, null, null, auto);
+        box-shadow: 1px 0 rgba($color1, 0.2), -1px 0 rgba($color1, 0.2);
+    }
+    @include medium_and_up() {
+        > * {
+            margin-bottom: 50px;
+        }
+    }
+    i {
+        color: $color1;
+    }
+}
+
+main.grid-container {
+    @include x_large_and_up {
+        box-sizing: content-box;
+        @include setbox(null, null, 0 360px, null);
+    }
+}
+
+@import "./header";
+
+@import "./footer";

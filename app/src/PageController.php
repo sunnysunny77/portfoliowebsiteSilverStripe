@@ -24,15 +24,19 @@ namespace {
          */
         private static $allowed_actions = [];
 
-       
-    protected function init()
-    {
+        protected function init()
+        {
 
-        parent::init();
-        // You can include any CSS or JS required by your project here.
-        // See: https://docs.silverstripe.org/en/developer_guides/templates/requirements/
-        Requirements::css("{$this->ThemeDir()}/css/styles.css");
-        Requirements::javascript("{$this->ThemeDir()}/js/scripts.js");
-    }
+            parent::init();
+            // You can include any CSS or JS required by your project here.
+            // See: https://docs.silverstripe.org/en/developer_guides/templates/requirements/
+            Requirements::css("{$this->ThemeDir()}/css/foundation.min.css");
+            Requirements::css("{$this->ThemeDir()}/css/icons/foundation-icons.css");
+            Requirements::javascript("{$this->ThemeDir()}/js/vendor/jquery.js");
+            Requirements::javascript("{$this->ThemeDir()}/js/vendor/what-input.js");
+            Requirements::javascript("{$this->ThemeDir()}/js/vendor/foundation.min.js");
+            Requirements::javascript("node_modules/vivus/dist/vivus.min.js");
+            Requirements::javascript("{$this->ThemeDir()}/js/app.js");
+        }
     }
 }
