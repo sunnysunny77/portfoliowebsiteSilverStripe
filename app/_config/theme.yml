@@ -1,0 +1,8 @@
+---
+Name: portfoliowebsite
+---
+SilverStripe\View\SSViewer:
+  themes:
+    - 'portfoliowebsite'
+    - '$public'
+    - '$default'

@@ -1,0 +1,12 @@
+{
+  "name": "silverstripe",
+  "version": "1.0.0",
+  "description": "theme",
+  "scripts": {
+    "build": "node ./node_modules/sass/sass.js ./themes/portfoliowebsite/scss:./themes/portfoliowebsite/css",
+    "watch": "node ./node_modules/sass/sass.js ./themes/portfoliowebsite/scss:./themes/portfoliowebsite/css -w"
+  },
+  "dependencies": {
+    "sass": "latest"
+  }
+}
