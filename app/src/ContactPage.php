@@ -11,12 +11,6 @@ class ContactPage extends Page
 {
 
     private static $table_name = 'ContactPage'; 
-    
-    private static $owns = [
-
-        'Phone',
-        'Email',
-    ];
 
     private static $has_one = [
 

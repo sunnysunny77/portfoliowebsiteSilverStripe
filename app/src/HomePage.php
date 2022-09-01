@@ -10,19 +10,6 @@ class HomePage extends Page
 {
     private static $table_name = 'HomePage';
 
-    private static $owns = [
-
-        'StoryboardObjs',
-        'ConceptArtObjs',
-        'IndependantCreationsObjs',
-        'TheatreObjs',
-        'DesignObjs',
-        'PoemsObjs',
-        'IllustratedPoetryObjs',
-        'SculpturesObjs',
-        'IllustrationsObjs',
-        
-    ];
     private static $has_many = [
 
         'StoryboardObjs' => StoryboardObj::class,
