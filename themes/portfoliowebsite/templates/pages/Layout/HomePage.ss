@@ -330,11 +330,17 @@
                                             <span class="hide">Eject icon</span>
                                         </i>
                                     </a>
+                                   <% loop DesignObjs %>
                                     <div>
+
                                         <img class="gallery"
-                                            src="https://via.placeholder.com/600x600"
-                                            alt="">
+                                            src="$DesignObj.URL"
+                                            width="$DesignObj.Width"
+                                            height="$DesignObj.Height"
+                                            loading="lazy" alt="$ImageTitle" />
+
                                     </div>
+                                     <% end_loop %>
                                 </section>
                             </div>
                         </div>
@@ -403,11 +409,17 @@
                                                 <span class="hide">Eject icon</span>
                                             </i>
                                         </a>
-                                        <div>
-                                            <img class="gallery"
-                                                src="https://via.placeholder.com/600x600"
-                                                alt="">
-                                        </div>
+                                   <% loop PoemsObjs %>
+                                    <div>
+
+                                        <img class="gallery"
+                                            src="$PoemsObj.URL"
+                                            width="$PoemsObj.Width"
+                                            height="$PoemsObj.Height"
+                                            loading="lazy" alt="$ImageTitle" />
+
+                                    </div>
+                                     <% end_loop %>
                                     </section>
                                     <section class="cell grid-x
                                         text-center align-center">
@@ -425,11 +437,17 @@
                                                 <span class="hide">Eject icon</span>
                                             </i>
                                         </a>
+                                       <% loop IllustratedPoetryObjs %>
                                         <div>
+
                                             <img class="gallery"
-                                                src="https://via.placeholder.com/600x600"
-                                                alt="">
+                                                src="$IllustratedPoetryObj.URL"
+                                                width="$IllustratedPoetryObj.Width"
+                                                height="$IllustratedPoetryObj.Height"
+                                                loading="lazy" alt="$ImageTitle" />
+
                                         </div>
+                                        <% end_loop %>
                                     </section>
                                 </div>
                             </div>
@@ -477,11 +495,17 @@
                                             <span class="hide">Eject icon</span>
                                         </i>
                                     </a>
-                                    <div>
-                                        <img class="gallery"
-                                            src="https://via.placeholder.com/600x600"
-                                            alt="">
-                                    </div>
+                                      <% loop SculpturesObjs %>
+                                        <div>
+
+                                            <img class="gallery"
+                                                src="$SculpturesObj.URL"
+                                                width="$SculpturesObj.Width"
+                                                height="$SculpturesObj.Height"
+                                                loading="lazy" alt="$ImageTitle" />
+
+                                        </div>
+                                        <% end_loop %>
                                 </section>
                             </div>
                         </div>
@@ -529,11 +553,17 @@
                                             <span class="hide">Eject icon</span>
                                         </i>
                                     </a>
-                                    <div>
-                                        <img class="gallery"
-                                            src="https://via.placeholder.com/600x600"
-                                            alt="">
-                                    </div>
+                                    <% loop IllustrationsObjs %>
+                                        <div>
+
+                                            <img class="gallery"
+                                                src="$IllustrationsObj.URL"
+                                                width="$IllustrationsObj.Width"
+                                                height="$IllustrationsObj.Height"
+                                                loading="lazy" alt="$ImageTitle" />
+
+                                        </div>
+                                        <% end_loop %>
                                 </section>
                             </div>
                         </div>

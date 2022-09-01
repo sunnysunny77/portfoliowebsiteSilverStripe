@@ -16,6 +16,12 @@ class HomePage extends Page
         'ConceptArtObjs',
         'IndependantCreationsObjs',
         'TheatreObjs',
+        'DesignObjs',
+        'PoemsObjs',
+        'IllustratedPoetryObjs',
+        'SculpturesObjs',
+        'IllustrationsObjs',
+        
     ];
     private static $has_many = [
 
@@ -23,6 +29,11 @@ class HomePage extends Page
         'ConceptArtObjs' => ConceptArtObj::class,
         'IndependantCreationsObjs' => IndependantCreationsObj::class,
         'TheatreObjs' => TheatreObj::class,
+        'DesignObjs' => DesignObj::class,
+        'PoemsObjs' => PoemsObj::class,
+        'IllustratedPoetryObjs' => IllustratedPoetryObj::class,
+        'SculpturesObjs' => SculpturesObj::class,
+        'IllustrationsObjs' => IllustrationsObj::class,
     ];
 
     public function getCMSFields()
@@ -74,6 +85,56 @@ class HomePage extends Page
                 'TheatreObjs',
                 'Theatre',
                 $this->TheatreObjs(),
+                GridFieldConfig_RecordEditor::create()
+            )
+        );
+
+        $fields->addFieldToTab(
+            'Root.Design',
+            GridField::create(
+                'DesignObjs',
+                'Design',
+                $this->DesignObjs(),
+                GridFieldConfig_RecordEditor::create()
+            )
+        );
+
+        $fields->addFieldToTab(
+            'Root.Poems',
+            GridField::create(
+                'PoemsObjs',
+                'Poems',
+                $this->PoemsObjs(),
+                GridFieldConfig_RecordEditor::create()
+            )
+        );
+
+        $fields->addFieldToTab(
+            'Root.IllustratedPoetry',
+            GridField::create(
+                'IllustratedPoetryObjs',
+                'IllustratedPoetry',
+                $this->IllustratedPoetryObjs(),
+                GridFieldConfig_RecordEditor::create()
+            )
+        );
+
+        $fields->addFieldToTab(
+            'Root.Sculptures',
+            GridField::create(
+                'SculpturesObjs',
+                'Sculptures',
+                $this->SculpturesObjs(),
+                GridFieldConfig_RecordEditor::create()
+            )
+        );
+
+        $fields->addFieldToTab(
+            'Root.Illustrations',
+            GridField::create(
+                'IllustrationsObjs',
+                'Illustrations',
+                $this->IllustrationsObjs(),
                 GridFieldConfig_RecordEditor::create()
             )
         );
