@@ -1,9 +1,9 @@
 <main id="main" class="grid-container grid-y">
     <h2 class="cell text-center medium-text-right">Get in touch</h2>
     <p class="text-center medium-text-right">
-        <a href="mailto:example@example.com">example@example.com</a>
+        <a href="mailto:$Email">$Email</a>
         <br>
-        <a href="tel:0412620989">0412620989</a>
+        <a href="tel:$Phone">$Phone</a>
         <br>
         <a download href="$Vcard.URL">Download Contact</a>
         <br>
