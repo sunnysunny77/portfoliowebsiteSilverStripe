@@ -2,11 +2,6 @@
 
 namespace pages;
 
-include "dataObjs/StoryboardObj.php";
-include "dataObjs/ConceptArtObj.php";
-include "dataObjs/IndependantCreationsObj.php";
-include "dataObjs/TheatreObj.php";
-
 use Page;
 use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
@@ -25,9 +20,9 @@ class HomePage extends Page
     private static $has_many = [
 
         'StoryboardObjs' => StoryboardObj::class,
-        'ConceptArtObjs' => dataObjs\ConceptArtObj::class,
-        'IndependantCreationsObjs' => dataObjs\IndependantCreationsObj::class,
-        'TheatreObjs' => dataObjs\TheatreObj::class,
+        'ConceptArtObjs' => ConceptArtObj::class,
+        'IndependantCreationsObjs' => IndependantCreationsObj::class,
+        'TheatreObjs' => TheatreObj::class,
     ];
 
     public function getCMSFields()
