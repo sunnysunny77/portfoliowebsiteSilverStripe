@@ -25,7 +25,3 @@ SilverStripe\CMS\Model\SiteTree:
 SilverStripe\Assets\File:
   allowed_extensions:
     - vcf
-
-
-
- 
