@@ -59,7 +59,7 @@ class IllustratedPoetryObj extends DataObject
         $text->setDescription('ImageTitle of upload.');
 
         $image = UploadField::create('IllustratedPoetryObj', 'IllustratedPoetryObj');
-        $image->allowedExtensions = array('jpg', 'jpeg', 'png');
+        $image->allowedExtensions = array('jpg', 'jpeg', 'JPG', 'JPEG', 'png' , 'PNG');
         $image->setFolderName('IllustratedPoetry');
 
         $fields = FieldList::create($text, $image);

@@ -59,7 +59,7 @@ class ConceptArtObj extends DataObject
         $text->setDescription('ImageTitle of upload.');
 
         $image = UploadField::create('ConceptArtObj', 'ConceptArtObj');
-        $image->allowedExtensions = array('jpg', 'jpeg', 'png');
+        $image->allowedExtensions = array('jpg', 'jpeg', 'JPG', 'JPEG', 'png' , 'PNG');
         $image->setFolderName('ConceptArt');
 
         $fields = FieldList::create($text, $image);

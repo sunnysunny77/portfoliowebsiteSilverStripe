@@ -59,7 +59,7 @@ class IllustrationsObj extends DataObject
         $text->setDescription('ImageTitle of upload.');
 
         $image = UploadField::create('IllustrationsObj', 'IllustrationsObj');
-        $image->allowedExtensions = array('jpg', 'jpeg', 'png');
+        $image->allowedExtensions = array('jpg', 'jpeg', 'JPG', 'JPEG', 'png' , 'PNG');
         $image->setFolderName('Illustrations');
 
         $fields = FieldList::create($text, $image);

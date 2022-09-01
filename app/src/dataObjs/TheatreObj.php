@@ -59,7 +59,7 @@ class TheatreObj extends DataObject
         $text->setDescription('ImageTitle of upload.');
 
         $image = UploadField::create('TheatreObj', 'TheatreObj');
-        $image->allowedExtensions = array('jpg', 'jpeg', 'png');
+        $image->allowedExtensions = array('jpg', 'jpeg', 'JPG', 'JPEG', 'png' , 'PNG');
         $image->setFolderName('Theatre');
 
         $fields = FieldList::create($text, $image);

@@ -21,7 +21,15 @@ Silverstripe\SiteConfig\SiteConfig:
     
 SilverStripe\ORM\DataObject:
   dataObjs:
-   - pages
+   - pages/ConceptArtObj
+   - pages/DesignObj
+   - pages/IllustratedPoetryObj
+   - pages/IllustrationsObj
+   - pages/IndependantCreationsObj
+   - pages/PoemsObj
+   - pages/SculpturesObj 
+   - pages/StoryboardObj 
+   - pages/TheatreObj
 
 SilverStripe\CMS\Model\SiteTree:
     create_default_pages: false

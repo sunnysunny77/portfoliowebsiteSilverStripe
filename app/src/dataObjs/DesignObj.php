@@ -59,7 +59,7 @@ class DesignObj extends DataObject
         $text->setDescription('ImageTitle of upload.');
 
         $image = UploadField::create('DesignObj', 'DesignObj');
-        $image->allowedExtensions = array('jpg', 'jpeg', 'png');
+        $image->allowedExtensions = array('jpg', 'jpeg', 'JPG', 'JPEG', 'png' , 'PNG');
         $image->setFolderName('Design');
 
         $fields = FieldList::create($text, $image);

@@ -59,7 +59,7 @@ class IndependantCreationsObj extends DataObject
         $text->setDescription('ImageTitle of upload.');
 
         $image = UploadField::create('IndependantCreationsObj', 'IndependantCreationsObj');
-        $image->allowedExtensions = array('jpg', 'jpeg', 'png');
+        $image->allowedExtensions = array('jpg', 'jpeg', 'JPG', 'JPEG', 'png' , 'PNG');
         $image->setFolderName('IndependantCreations');
 
         $fields = FieldList::create($text, $image);

@@ -59,7 +59,7 @@ class SculpturesObj extends DataObject
         $text->setDescription('ImageTitle of upload.');
 
         $image = UploadField::create('SculpturesObj', 'SculpturesObj');
-        $image->allowedExtensions = array('jpg', 'jpeg', 'png');
+        $image->allowedExtensions = array('jpg', 'jpeg', 'JPG', 'JPEG', 'png' , 'PNG');
         $image->setFolderName('Sculptures');
 
         $fields = FieldList::create($text, $image);
