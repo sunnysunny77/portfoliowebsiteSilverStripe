@@ -5,7 +5,7 @@
         <br>
         <a href="tel:0412620989">0412620989</a>
         <br>
-        <a download href="vcard.vcf">Download Contact</a>
+        <a download href="$Vcard.URL">Download Contact</a>
         <br>
         Please try the forms below
     </p>
