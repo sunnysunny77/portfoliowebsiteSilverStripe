@@ -13,7 +13,7 @@ class CMSPageSettingsController extends CMSMain
 
     private static $url_priority = 42;
 
-    private static $required_permission_codes = 'ADMIN';
+    private static $required_permission_codes = 'CMS_ACCESS_CMSMain';
 
     public function getEditForm($id = null, $fields = null)
     {
