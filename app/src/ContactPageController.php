@@ -24,10 +24,10 @@ class ContactPageController extends PageController
             $this,
             __FUNCTION__,
             FieldList::create(
+                
                 HeaderField::create('Header', 'Hire')
                 ->addExtraClass('lead'),
         
-
                 TextField::create('first-name','First name')
                 ->setAttribute('autocomplete', 'on')
                 ->setAttribute('maxlength', '20'),
