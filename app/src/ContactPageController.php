@@ -10,39 +10,64 @@ use SilverStripe\Forms\EmailField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\FormAction;
 use SilverStripe\Forms\Form;
-
+use SilverStripe\Forms\RequiredFields;
+use SilverStripe\Control\Email\Email;
 
 
 class ContactPageController extends PageController
 {
 
   
-    private static $allowed_actions = ['Form'];
+    private static $allowed_actions = ['HireForm'];
 
-    public function Form() 
+    public function HireForm() 
     { 
-        $fields = new FieldList( 
-            new TextField('Name'), 
-            new EmailField('Email'), 
-            new TextareaField('Message')
-        ); 
-        $actions = new FieldList( 
-            new FormAction('submit', 'Submit') 
-        ); 
-        return new Form($this, 'Form', $fields, $actions); 
+        $form = Form::create(
+            $this,
+            __FUNCTION__,
+            FieldList::create(
+                TextField::create('first-name','First name')
+                ->setAttribute('autocomplete', 'on')
+                ->setAttribute('maxlength', '20'),
+                TextField::create('last-name','Last name')
+                ->setAttribute('autocomplete', 'on')
+                ->setAttribute('maxlength', '20'),  
+                EmailField::create('email','Email')
+                ->setAttribute('autocomplete', 'on')
+                ->setAttribute('maxlength', '20'),
+                TextField::create('phone','Phone')
+                ->setAttribute('autocomplete', 'on')
+                ->setAttribute('pattern', '[+]?[0-9]{3,15}')
+                ->setAttribute('title', 'Accepts +###############'),
+                TextareaField::create('text','Position description')
+                ->setAttribute('maxlength', '1000')
+            ),
+            FieldList::create(
+                FormAction::create('handleHire', 'Submit')
+                    ->addExtraClass('button')
+            ),
+            RequiredFields::create('first-name', 'last-name', 'email','phone', 'text')
+        );
+
+     
+        $data = $this->getRequest()->getSession()->get("FormData.{$form->getName()}.data");
+
+        return $data ? $form->loadDataFrom($data) : $form;
     }
 
-    public function submit($data, $form) 
+    public function handleHire($data, $form) 
     { 
         $email = new Email(); 
          
-        $email->setTo('test@example.com'); 
-        $email->setFrom($data['Email']); 
-        $email->setSubject("Contact Message from {$data["Name"]}"); 
+        $email->setTo('shlooby07@gmail.com'); 
+        $email->setFrom($data['email']); 
+        $email->setSubject("Hire Message from {$data["first-name"]}"); 
          
         $messageBody = " 
-            <p><strong>Name:</strong> {$data['Name']}</p> 
-            <p><strong>Message:</strong> {$data['Message']}</p> 
+            <p><strong>Name:</strong> {$data['first-name']} {$data['last-name']}</p> 
+            <p><strong>Email:</strong> {$data['email']} </p> 
+            <p><strong>Phone:</strong> {$data['phone']} </p> 
+            <p><strong>Position description:</strong> {$data['text']}</p> 
         "; 
         $email->setBody($messageBody); 
         $email->send(); 

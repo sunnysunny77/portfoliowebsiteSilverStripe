@@ -36,7 +36,7 @@
     </ul>
     <div class="tabs-content" data-tabs-content="tabs">
         <div class="tabs-panel is-active" id="panel1">
-       $Form
+       $HireForm
 
         </div>
         <div class="tabs-panel" id="panel2">
