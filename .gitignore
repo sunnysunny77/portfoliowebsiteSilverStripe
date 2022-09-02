@@ -1,6 +1,8 @@
 /silverstripe-cache/
 /.env
-/vendor/
+!/vendor
+/vendor/*
+!/vendor/silverstripe/cms/code/Controllers/CMSPageSettingsController.php
 /node_modules/
 /themes/simple/
 /_resources/
