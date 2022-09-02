@@ -36,70 +36,8 @@
     </ul>
     <div class="tabs-content" data-tabs-content="tabs">
         <div class="tabs-panel is-active" id="panel1">
-            <form
-                class="text-center"
-                action="./php/form-1.php"
-                id="form-1"
-                method="post">
-                <fieldset class="grid-x text-left">
-                    <legend id="response-1" class="cell">Hire Form</legend>
-                    <label class="cell small-6 medium-4">
-                        First name
-                        <input
-                            autocomplete="on"
-                            required
-                            type="text"
-                            name="first-name"
-                            maxlength="20">
-                    </label>
-                    <label class="cell small-6 medium-4">
-                        Last name
-                        <input
-                            autocomplete="on"
-                            required
-                            type="text"
-                            name="last-name"
-                            maxlength="20">
-                    </label>
-                    <label for="email-1" class="cell">
-                        Email
-                    </label>
-                    <input
-                        id="email-1"
-                        class="cell small-6 medium-5"
-                        autocomplete="on"
-                        required
-                        name="email"
-                        type="email"
-                        maxlength="40">
-                    <label for="tel-1" class="cell">
-                        Phone
-                    </label>
-                    <input
-                        id="tel-1"
-                        class="cell small-6 medium-5"
-                        autocomplete="on"
-                        required
-                        name="phone"
-                        type="tel"
-                        pattern="[+]?[0-9]{3,15}"
-                        title="Accepts +###############">
-                    <label class="cell">
-                        Position description
-                        <textarea
-                            required
-                            name="text"
-                            rows="5"
-                            maxlength="1000"></textarea>
-                    </label>
-                </fieldset>
-                <input
-                    id="submit-1"
-                    aria-label="Form submit"
-                    type="submit"
-                    class="button"
-                    value="Submit">
-            </form>
+       $Form
+
         </div>
         <div class="tabs-panel" id="panel2">
             <form
