@@ -24,8 +24,8 @@ class ContactPageController extends PageController
             $this,
             __FUNCTION__,
             FieldList::create(
-                
-                HeaderField::create('Header', 'Hire')
+
+                HeaderField::create('Header', 'Hire form')
                 ->addExtraClass('lead'),
         
                 TextField::create('first-name','First name')
