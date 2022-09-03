@@ -271,9 +271,6 @@ footer ul + ul.no-bullet {
     width: 40%;
   }
 }
-#Form_HireForm .btn-toolbar {
-  text-align: center;
-}
 
 #main form input,
 #main form textarea {
@@ -301,6 +298,10 @@ footer ul + ul.no-bullet {
 #main form textarea::-webkit-scrollbar-track {
   background: rgba(97, 97, 97, 0.25);
 }
+#main form .btn-toolbar {
+  text-align: center;
+}
+
 blockquote,
 cite {
   color: #414141;

@@ -72,10 +72,6 @@ main a {
             @include setbox(40%, null, null, null);
         }
     }
-
-    .btn-toolbar {
-        text-align: center;
-    }
 }
 
 #main form {
@@ -115,6 +111,9 @@ main a {
         &::-webkit-scrollbar-thumb:focus {
             @extend ::-webkit-scrollbar-thumb;
         }
+    }
+    .btn-toolbar {
+        text-align: center;
     }
 }
 
