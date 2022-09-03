@@ -62,7 +62,7 @@ main a {
 
     #Form_HireForm_first-name_Holder,
     #Form_HireForm_last-name_Holder {
-        @include setbox(49.5%, null, null, 16px auto auto auto);
+        @include setbox(49.5%, null, null, 8px auto auto auto);
         display: inline-block;
 
         @include medium_and_up() {

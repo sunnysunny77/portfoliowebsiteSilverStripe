@@ -252,7 +252,7 @@ footer ul + ul.no-bullet {
 #Form_HireForm #Form_HireForm_first-name_Holder,
 #Form_HireForm #Form_HireForm_last-name_Holder {
   width: 49.5%;
-  margin: 16px auto auto auto;
+  margin: 8px auto auto auto;
   display: inline-block;
 }
 @media screen and (min-width: 40em) {
