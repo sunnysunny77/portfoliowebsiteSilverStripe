@@ -27,7 +27,7 @@ main a {
         }
     }
 
-    .tabs-title>a[aria-selected="true"] {
+    .tabs-title > a[aria-selected="true"] {
         background: rgba($color6, 0.1);
     }
 }
@@ -59,7 +59,6 @@ main a {
     #Form_HireForm_last-name_Holder {
         @include setbox(49.5%, null, null, 8px auto auto auto);
         display: inline-block;
-
         @include medium_and_up() {
             @include setbox(30%, null, null, null);
         }
@@ -80,7 +79,6 @@ main a {
 }
 
 #main form {
-
     input,
     textarea {
         background-image: url(../images/template/paper.png);
