@@ -10,7 +10,6 @@ use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\FormAction;
 use SilverStripe\Forms\Form;
 use SilverStripe\Forms\RequiredFields;
-use SilverStripe\Forms\HeaderField;
 
 class ContactPageController extends PageController
 {
@@ -24,9 +23,6 @@ class ContactPageController extends PageController
             $this,
             __FUNCTION__,
             FieldList::create(
-
-                HeaderField::create('Header', 'Hire form')
-                ->addExtraClass('lead'),
         
                 TextField::create('first-name','First name')
                 ->setAttribute('autocomplete', 'on')
