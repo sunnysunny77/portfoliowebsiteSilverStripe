@@ -249,10 +249,6 @@ footer ul + ul.no-bullet {
   color: #2b241d;
 }
 
-#Form_HireForm fieldset::before {
-  content: "Hire Form";
-  display: block;
-}
 #Form_HireForm #Form_HireForm_first-name_Holder,
 #Form_HireForm #Form_HireForm_last-name_Holder {
   width: 49.5%;

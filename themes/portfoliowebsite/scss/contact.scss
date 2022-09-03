@@ -55,11 +55,6 @@ main a {
 }
 
 #Form_HireForm {
-    fieldset::before {
-        content: "Hire Form";
-        display: block;
-    }
-
     #Form_HireForm_first-name_Holder,
     #Form_HireForm_last-name_Holder {
         @include setbox(49.5%, null, null, 8px auto auto auto);
