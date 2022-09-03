@@ -91,7 +91,7 @@ class ContactPageController extends PageController
             $form->sessionMessage('Email sent', 'good');
           }
 
-          return $this->redirectBack();
+          return $this->redirect('/contact?active=1');
     }
 
     public function PurchaseForm() 
