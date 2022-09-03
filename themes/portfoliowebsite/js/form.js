@@ -1,11 +1,9 @@
 $(document).ready(function() { 
-  
+
   const searchParams = new URLSearchParams(window.location.search)
   const active = searchParams.get('active') 
 
-  if (active === "1")  {
-    return
-  } else if (active === "2") {
+  if (active === "2") {
      
       $('#isOne').removeClass("is-active");
       $('#isOneA').attr("tabindex",-1);
