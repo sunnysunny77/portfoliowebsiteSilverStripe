@@ -36,6 +36,10 @@ body::before {
   }
 }
 
+a.current {
+  text-shadow: 0.25px 0 0 #2b241d;
+}
+
 h1 {
   font-size: inherit;
   margin: 0;
