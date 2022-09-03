@@ -18,18 +18,18 @@
                 </span>
             </i>
         </li>
-        <li class="tabs-title is-active small-3">
-            <a href="#panel1">
+        <li id="isOne" class="tabs-title is-active small-3">
+            <a id="isOneA" href="#panel1">
                 <h3>Hire</h3>
             </a>
         </li>
-        <li class="tabs-title small-3">
-            <a data-tabs-target="panel2" href="#panel2">
+        <li id="isTwo" class="tabs-title small-3">
+            <a id="isTwoA" data-tabs-target="panel2" href="#panel2">
                 <h3>Purchase</h3>
             </a>
         </li>
-        <li class="tabs-title small-3">
-            <a data-tabs-target="panel3" href="#panel3">
+        <li id="isThree" class="tabs-title small-3">
+            <a id="isThreeA" data-tabs-target="panel3" href="#panel3">
                 <h3>Enquiry</h3>
             </a>
         </li>
@@ -39,108 +39,7 @@
             $HireForm
         </div>
         <div class="tabs-panel" id="panel2">
-            <form
-                class="text-center"
-                action="./php/form-2.php"
-                id="form-2"
-                method="post">
-                <fieldset class="grid-x text-left">
-                    <legend id="response-2" class="cell">Purchase Form</legend>
-                    <label class="cell small-6 medium-4">
-                        First name
-                        <input
-                            autocomplete="on"
-                            required
-                            type="text"
-                            name="first-name"
-                            maxlength="20">
-                    </label>
-                    <label class="cell small-6 medium-4">
-                        Last name
-                        <input
-                            autocomplete="on"
-                            required
-                            type="text"
-                            name="last-name"
-                            maxlength="20">
-                    </label>
-                    <label for="email-2" class="cell">
-                        Email
-                    </label>
-                    <input
-                        id="email-2"
-                        class="cell small-6 medium-5"
-                        autocomplete="on"
-                        required
-                        name="email"
-                        type="email"
-                        maxlength="40">
-                    <label for="phone-2" class="cell">
-                        Phone
-                    </label>
-                    <input
-                        id="phone-2"
-                        class="cell small-6 medium-5"
-                        autocomplete="on"
-                        required
-                        name="phone"
-                        type="tel"
-                        pattern="[+]?[0-9]{3,15}"
-                        title="Accepts +###############">
-                    <label class="cell">
-                        Outside Australia
-                        <input type="checkbox" name="outside-aus">
-                    </label>
-                    <label class="cell large-3">
-                        Street address
-                        <input
-                            required
-                            type="text"
-                            name="street"
-                            maxlength="40">
-                    </label>
-                    <label class="cell large-3">
-                        Suburb
-                        <input
-                            required
-                            type="text"
-                            name="suburb"
-                            maxlength="40">
-                    </label>
-                    <label class="cell small-6 large-3">
-                        City
-                        <input
-                            required
-                            type="text"
-                            name="city"
-                            maxlength="40">
-                    </label>
-                    <label class="cell small-6 large-3">
-                        Post code
-                        <input
-                            required
-                            type="text"
-                            name="post-code"
-                            pattern="[0-9]*"
-                            maxlength="20"
-                            title="Accepts digits #">
-                    </label>
-                    <label class="cell">
-                        Purchase details
-                        <textarea
-                            required
-                            name="text"
-                            rows="5"
-                            maxlength="1000"></textarea>
-                    </label>
-                </fieldset>
-                <input
-                    id="submit-2"
-                    aria-label="Form submit"
-                    type="submit"
-                    class="button"
-                    value="Submit">
-            </form>
+           $PurchaseForm
         </div>
         <div class="tabs-panel" id="panel3">
             <form
