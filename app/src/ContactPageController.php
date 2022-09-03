@@ -49,7 +49,7 @@ class ContactPageController extends PageController
                 FormAction::create('handleHire', 'Submit')
                     ->addExtraClass('button')
             ),
-            RequiredFields::create('first-name', 'last-name', 'email','phone', 'text')
+            RequiredFields::create('first-name', 'last-name', 'email', 'phone', 'text')
         )->setLegend('Hire form');
      
         $data = $this->getRequest()->getSession()->get("FormData.{$form->getName()}.data");
@@ -82,7 +82,7 @@ class ContactPageController extends PageController
         $mail = mail($to_email,$subject,$contactus);
 
         if (!$mail) {
-            $form->sessionMessage('Erros sending', 'bad');
+            $form->sessionMessage('Error sending', 'bad');
           } else {
             $form->sessionMessage('Email sent', 'good');
           }
