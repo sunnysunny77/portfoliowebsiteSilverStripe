@@ -50,7 +50,7 @@
                     <% loop $Menu(1) %>
 
                     <li class="align-self-middle">
-                        <a class="$LinkingMode" href="$Link" title="Go to the $Title page">$MenuTitle</a></li>
+                        <a class="$LinkingMode" href="$Link" title="Go to the $Title page">$MenuTitle</a>
                     </li>         
 
                     <% end_loop %>
