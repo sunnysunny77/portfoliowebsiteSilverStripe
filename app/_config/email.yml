@@ -3,7 +3,9 @@
 Name: project-emailconfig
 After:
   - '#emailconfig'
+Only:
+  environment: dev
 ---
 SilverStripe\Core\Injector\Injector:
   Swift_Transport:
-    class: Swift_SendmailTransport
+    class: Swift_MailTransport
