@@ -42,7 +42,7 @@ class ContactPageController extends PageController
                 EmailField::create('email','Email')
                 ->addExtraClass('cell small-6 medium-5')
                 ->setAttribute('autocomplete', 'on')
-                ->setAttribute('maxlength', '20'),
+                ->setAttribute('maxlength', '40'),
 
                 TextField::create('phone','Phone')
                 ->addExtraClass('cell small-6 medium-5')
@@ -225,7 +225,7 @@ class ContactPageController extends PageController
                 EmailField::create('email','Email')
                 ->addExtraClass('cell small-6 medium-5')
                 ->setAttribute('autocomplete', 'on')
-                ->setAttribute('maxlength', '20'),
+                ->setAttribute('maxlength', '40'),
 
                 TextField::create('phone','Phone')
                 ->addExtraClass('cell small-6 medium-5')
