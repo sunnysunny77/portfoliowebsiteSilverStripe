@@ -37,10 +37,12 @@ class ContactPageController extends PageController
                 ->setAttribute('maxlength', '20'),  
 
                 EmailField::create('email','Email')
+                ->addExtraClass('cell small-6 medium-5')
                 ->setAttribute('autocomplete', 'on')
                 ->setAttribute('maxlength', '20'),
 
                 TextField::create('phone','Phone')
+                ->addExtraClass('cell small-6 medium-5')
                 ->setAttribute('autocomplete', 'on')
                 ->setAttribute('pattern', '[+]?[0-9]{3,15}')
                 ->setAttribute('title', 'Accepts +###############'),
@@ -54,7 +56,7 @@ class ContactPageController extends PageController
                     ->addExtraClass('button')
             ),
             RequiredFields::create('first-name', 'last-name', 'email', 'phone', 'text')
-        )->setLegend('Hire form');
+        );
      
         $data = $this->getRequest()->getSession()->get("FormData.{$form->getName()}.data");
 
@@ -147,7 +149,7 @@ class ContactPageController extends PageController
                     ->addExtraClass('button')
             ),
             RequiredFields::create('first-name', 'last-name', 'email', 'phone', 'street', 'suburb', 'city', 'post-code', 'text')
-        )->setLegend('PurchaseForm');
+        );
      
         $data = $this->getRequest()->getSession()->get("FormData.{$form->getName()}.data");
 

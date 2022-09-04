@@ -36,75 +36,55 @@
     </ul>
     <div class="tabs-content" data-tabs-content="tabs">
         <div class="tabs-panel is-active" id="panel1">
-            $HireForm
-        </div>
-        <div class="tabs-panel" id="panel2">
-           $PurchaseForm
-        </div>
-        <div class="tabs-panel" id="panel3">
-            <form
-                class="text-center"
-                action="./php/form-3.php"
-                id="form-3"
-                method="post">
+
+            <form class="text-center" $HireForm.FormAttributes>
+
                 <fieldset class="grid-x text-left">
-                    <legend id="response-3" class="cell">Enquiry Form</legend>
+
+                    <legend class="cell">Hire Form</legend>
+
+                    <p class="cell">$HireForm.Message</p>
+
                     <label class="cell small-6 medium-4">
                         First name
-                        <input
-                            autocomplete="on"
-                            required
-                            type="text"
-                            name="first-name"
-                            maxlength="20">
+                        $HireForm.Fields.dataFieldByName(first-name)
                     </label>
+
                     <label class="cell small-6 medium-4">
                         Last name
-                        <input
-                            autocomplete="on"
-                            required
-                            type="text"
-                            name="last-name"
-                            maxlength="20">
+                        $HireForm.Fields.dataFieldByName(last-name)
                     </label>
-                    <label for="email-3" class="cell">
+
+                    <label for="Form_HireForm_email" class="cell">
                         Email
                     </label>
-                    <input
-                        id="email-3"
-                        class="cell small-6 medium-5"
-                        autocomplete="on"
-                        required
-                        name="email"
-                        type="email"
-                        maxlength="40">
-                    <label for="phone-3" class="cell">
+                    $HireForm.Fields.dataFieldByName(email)
+
+                    <label for="Form_HireForm_phone" class="cell">
                         Phone
                     </label>
-                    <input
-                        id="phone-3"
-                        class="cell small-6 medium-5"
-                        autocomplete="on"
-                        required
-                        name="phone"
-                        type="tel"
-                        pattern="[+]?[0-9]{3,15}"
-                        title="Accepts +###############">
+                    $HireForm.Fields.dataFieldByName(phone)
+
                     <label class="cell">
-                        Enquiry
-                        <textarea
-                            required
-                            name="text"
-                            rows="5"
-                            maxlength="1000"></textarea>
+                        Position description
+                        $HireForm.Fields.dataFieldByName(text)
+                       
                     </label>
+
+                    $HireForm.Fields.FieldByName(SecurityID)
+
                 </fieldset>
-                <input
-                    id="submit-3"
-                    aria-label="Form submit"
-                    type="submit"
-                    class="button">
+
+                <% loop $HireForm.Actions %>$Field<% end_loop %>
+
             </form>
+
+        </div>
+        <div class="tabs-panel" id="panel2">
+            $PurchaseForm
+        </div>
+        <div class="tabs-panel" id="panel3">
+
         </div>
     </div>
     <div class="grid-x align-center text-right">
