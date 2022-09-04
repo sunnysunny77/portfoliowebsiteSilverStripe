@@ -67,8 +67,7 @@
 
                     <label class="cell">
                         Position description
-                        $HireForm.Fields.dataFieldByName(text)
-                       
+                        $HireForm.Fields.dataFieldByName(text)∂       
                     </label>
 
                     $HireForm.Fields.FieldByName(SecurityID)
