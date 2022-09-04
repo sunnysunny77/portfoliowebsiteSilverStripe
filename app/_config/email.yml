@@ -8,4 +8,8 @@ Only:
 ---
 SilverStripe\Core\Injector\Injector:
   Swift_Transport:
-    class: Swift_MailTransport
+    class: Swift_SendmailTransport
+
+SilverStripe\Control\Email\Email:
+  admin_email:
+    shlooby07@gmail.com: 'Support team'

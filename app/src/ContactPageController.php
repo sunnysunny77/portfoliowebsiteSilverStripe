@@ -11,6 +11,7 @@ use SilverStripe\Forms\FormAction;
 use SilverStripe\Forms\Form;
 use SilverStripe\Forms\RequiredFields;
 use SilverStripe\Forms\CheckboxField;
+use SilverStripe\Control\Email\Email;
 
 class ContactPageController extends PageController
 {
@@ -81,15 +82,16 @@ class ContactPageController extends PageController
 
         $contactus = "
         You have a message from the Hire Form on your website:
-        Name: ".$first_name." ".$last_name."
-        Email: ".$email."
-        Phone: ".$phone."
-        Position description: ".$text;
+        <br/>Name: ".$first_name." ".$last_name."
+        <br/>Email: ".$email."
+        <br/>Phone: ".$phone."
+        <br/>Position description: ".$text;
         $contactus  = wordwrap($contactus ,70);
 
-        $mail = mail($to_email,$subject,$contactus);
+        $email = new Email($email, $to_email, $subject, $contactus);
+        $email->send();
 
-        if (!$mail) {
+        if (!$email) {
             $form->sessionMessage('Error sending', 'bad');
           } else {
             $form->sessionMessage('Email sent', 'good');
@@ -181,20 +183,21 @@ class ContactPageController extends PageController
 
         $contactus = "
         You have a message from the Purchase Form on your website:
-        Name: ".$first_name." ".$last_name."
-        Email: ".$email."
-        Phone: ".$phone."
-        Outside Australia: ".$outside_aus."
-        Street: ".$street."
-        Suburb: ".$suburb."
-        City: ".$city."
-        Post Code: ".$post_code."
-        Purchase details: ".$text;
+        <br/>Name: ".$first_name." ".$last_name."
+        <br/>Email: ".$email."
+        <br/>Phone: ".$phone."
+        <br/>Outside Australia: ".$outside_aus."
+        <br/>Street: ".$street."
+        <br/>Suburb: ".$suburb."
+        <br/>City: ".$city."
+        <br/>Post Code: ".$post_code."
+        <br/>Purchase details: ".$text;
         $contactus  = wordwrap($contactus ,70);
 
-        $mail = mail($to_email,$subject,$contactus);
+        $email = new Email($email, $to_email, $subject, $contactus);
+        $email->send();
 
-        if (!$mail) {
+        if (!$email) {
             $form->sessionMessage('Error sending', 'bad');
           } else {
             $form->sessionMessage('Email sent', 'good');
@@ -262,15 +265,16 @@ class ContactPageController extends PageController
         
         $contactus = "
         You have a message from the Enquiry Form on your website:
-        Name: ".$first_name." ".$last_name."
-        Email: ".$email."
-        Phone: ".$phone."
-        Enquiry: ".$text;
+        <br/>Name: ".$first_name." ".$last_name."
+        <br/>Email: ".$email."
+        <br/>Phone: ".$phone."
+        <br/>Enquiry: ".$text;
         $contactus  = wordwrap($contactus ,70);
 
-        $mail = mail($to_email,$subject,$contactus);
+        $email = new Email($email, $to_email, $subject, $contactus);
+        $email->send();
 
-        if (!$mail) {
+        if (!$email) {
             $form->sessionMessage('Error sending', 'bad');
           } else {
             $form->sessionMessage('Email sent', 'good');
