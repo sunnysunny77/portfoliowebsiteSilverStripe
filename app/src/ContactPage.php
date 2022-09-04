@@ -12,6 +12,11 @@ class ContactPage extends Page
 
     private static $table_name = 'ContactPage'; 
 
+    private static $owns = [
+
+        'Vcard',
+    ];
+
     private static $has_one = [
 
         'Vcard' => File::class,
@@ -47,6 +52,7 @@ class ContactPage extends Page
 
         $field = UploadField::create('Vcard', 'Vcard contact information');
         $field->allowedExtensions = array('vcf');
+        $field->setFolderName('vcf');
 
         $fields->addFieldToTab('Root.Main', $field);
 
