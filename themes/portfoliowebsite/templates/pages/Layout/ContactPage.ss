@@ -150,6 +150,48 @@
         </div>
         <div class="tabs-panel" id="panel3">
 
+         
+            <form class="text-center" $EnquiryForm.FormAttributes>
+
+                <b>$EnquiryForm.Message</b>
+
+                <fieldset class="grid-x text-left">
+
+                    <legend class="cell">Enquiry Form</legend>
+
+                    <label class="cell small-6 medium-4">
+                        First name
+                        $EnquiryForm.Fields.dataFieldByName(first-name)
+                    </label>
+
+                    <label class="cell small-6 medium-4">
+                        Last name
+                        $EnquiryForm.Fields.dataFieldByName(last-name)
+                    </label>
+
+                    <label for="Form_EnquiryForm_email" class="cell">
+                        Email
+                    </label>
+                    $EnquiryForm.Fields.dataFieldByName(email)
+
+                    <label for="Form_EnquiryForm_phone" class="cell">
+                        Phone
+                    </label>
+                    $EnquiryForm.Fields.dataFieldByName(phone)
+
+                    <label class="cell">
+                        Enquiry
+                        $EnquiryForm.Fields.dataFieldByName(text)       
+                    </label>
+                    
+                    $EnquiryForm.Fields.FieldByName(SecurityID)
+
+                </fieldset>
+            
+                <% loop $EnquiryForm.Actions %>$Field<% end_loop %>
+
+            </form>
+
         </div>
     </div>
     <div class="grid-x align-center text-right">

@@ -18,6 +18,8 @@ class ContactPageController extends PageController
     private static $allowed_actions = [
         'HireForm',
         'PurchaseForm',
+        'EnquiryForm',
+
     ];
 
     public function HireForm() 
@@ -199,6 +201,82 @@ class ContactPageController extends PageController
           }
 
           return $this->redirect('/contact?active=2');
+    }
+
+    public function EnquiryForm() 
+    { 
+
+        $form = Form::create(
+            $this,
+            __FUNCTION__,
+            FieldList::create(
+        
+                TextField::create('first-name','First name')
+                ->setAttribute('autocomplete', 'on')
+                ->setAttribute('maxlength', '20'),
+
+                TextField::create('last-name','Last name')
+                ->setAttribute('autocomplete', 'on')
+                ->setAttribute('maxlength', '20'),  
+
+                EmailField::create('email','Email')
+                ->addExtraClass('cell small-6 medium-5')
+                ->setAttribute('autocomplete', 'on')
+                ->setAttribute('maxlength', '20'),
+
+                TextField::create('phone','Phone')
+                ->addExtraClass('cell small-6 medium-5')
+                ->setAttribute('autocomplete', 'on')
+                ->setAttribute('pattern', '[+]?[0-9]{3,15}')
+                ->setAttribute('title', 'Accepts +###############'),
+
+                TextareaField::create('text','Enquiry')
+                ->setAttribute('maxlength', '1000')
+            ),
+            FieldList::create(
+
+                FormAction::create('handleEnquiry', 'Submit')
+                    ->addExtraClass('button')
+            ),
+            RequiredFields::create('first-name', 'last-name', 'email', 'phone', 'text')
+        );
+     
+        $data = $this->getRequest()->getSession()->get("FormData.{$form->getName()}.data");
+
+        return $data ? $form->loadDataFrom($data) : $form;
+    }
+
+    public function handleEnquiry($data, $form) 
+    { 
+
+        $session = $this->getRequest()->getSession();
+        $session->set("FormData.{$form->getName()}.data", $data);
+
+        $first_name = $data["first-name"];
+        $last_name = $data["last-name"];
+        $email = $data["email"];
+        $phone = $data["phone"];
+        $text = $data["text"];
+        $to_email = "shlooby07@gmail.com";
+        $subject = "New Enquiry Form Message";
+        
+        $contactus = "
+        You have a message from the Enquiry Form on your website:
+        Name: ".$first_name." ".$last_name."
+        Email: ".$email."
+        Phone: ".$phone."
+        Enquiry: ".$text;
+        $contactus  = wordwrap($contactus ,70);
+
+        $mail = mail($to_email,$subject,$contactus);
+
+        if (!$mail) {
+            $form->sessionMessage('Error sending', 'bad');
+          } else {
+            $form->sessionMessage('Email sent', 'good');
+          }
+
+          return $this->redirect('/contact?active=3');
     }
 
     protected function init()
