@@ -87,7 +87,7 @@
 
                 <fieldset class="grid-x text-left">
 
-                    <legend class="cell">Hire Form</legend>
+                    <legend class="cell">Purchase Form</legend>
 
                     <label class="cell small-6 medium-4">
                         First name
