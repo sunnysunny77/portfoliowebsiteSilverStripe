@@ -113,10 +113,12 @@ class ContactPageController extends PageController
                 ->setAttribute('maxlength', '20'),  
 
                 EmailField::create('email','Email')
+                ->addExtraClass('cell small-6 medium-5')
                 ->setAttribute('autocomplete', 'on')
                 ->setAttribute('maxlength', '40'),
 
                 TextField::create('phone','Phone')
+                ->addExtraClass('cell small-6 medium-5')
                 ->setAttribute('autocomplete', 'on')
                 ->setAttribute('pattern', '[+]?[0-9]{3,15}')
                 ->setAttribute('title', 'Accepts +###############'),

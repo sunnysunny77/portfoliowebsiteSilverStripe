@@ -80,7 +80,39 @@
 
         </div>
         <div class="tabs-panel" id="panel2">
-            $PurchaseForm
+            
+            <form class="text-center" $PurchaseForm.FormAttributes>
+
+                <b>$PurchaseForm.Message</b>
+
+                <fieldset class="grid-x text-left">
+
+                    <legend class="cell">Hire Form</legend>
+
+                    <label class="cell small-6 medium-4">
+                        First name
+                        $PurchaseForm.Fields.dataFieldByName(first-name)
+                    </label>
+
+                    <label class="cell small-6 medium-4">
+                        Last name
+                        $PurchaseForm.Fields.dataFieldByName(last-name)
+                    </label>
+
+                    <label for="Form_HireForm_email" class="cell">
+                        Email
+                    </label>
+                    $PurchaseForm.Fields.dataFieldByName(email)
+
+                    <label for="Form_HireForm_phone" class="cell">
+                        Phone
+                    </label>
+                    $PurchaseForm.Fields.dataFieldByName(phone)
+
+                    <% loop $PurchaseForm.Actions %>$Field<% end_loop %>
+
+            </form>
+
         </div>
         <div class="tabs-panel" id="panel3">
 
