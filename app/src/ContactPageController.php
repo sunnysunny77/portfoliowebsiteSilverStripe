@@ -93,7 +93,7 @@ class ContactPageController extends PageController
             $form->sessionMessage('Email sent', 'good');
           }
 
-          return $this->redirectBack();
+          return $this->redirect('/contact?active=1');
     }
 
     public function PurchaseForm() 
@@ -196,7 +196,7 @@ class ContactPageController extends PageController
             $form->sessionMessage('Email sent', 'good');
           }
 
-          return $this->redirectBack();
+          return $this->redirect('/contact?active=2');
     }
 
     protected function init()
@@ -206,5 +206,6 @@ class ContactPageController extends PageController
         // You can include any CSS or JS required by your project here.
         // See: https://docs.silverstripe.org/en/developer_guides/templates/requirements/
         Requirements::css("{$this->ThemeDir()}/css/contact.css");
+        Requirements::javascript("{$this->ThemeDir()}/js/form.js");
     }
 }
