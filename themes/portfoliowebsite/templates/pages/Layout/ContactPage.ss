@@ -99,17 +99,51 @@
                         $PurchaseForm.Fields.dataFieldByName(last-name)
                     </label>
 
-                    <label for="Form_HireForm_email" class="cell">
+                    <label for="Form_PurchaseForm_email" class="cell">
                         Email
                     </label>
                     $PurchaseForm.Fields.dataFieldByName(email)
 
-                    <label for="Form_HireForm_phone" class="cell">
+                    <label for="Form_PurchaseForm_phone" class="cell">
                         Phone
                     </label>
                     $PurchaseForm.Fields.dataFieldByName(phone)
 
-                    <% loop $PurchaseForm.Actions %>$Field<% end_loop %>
+                    <label class="cell">
+                        Outside Australia
+                        $PurchaseForm.Fields.dataFieldByName(outside-aus)       
+                    </label>
+
+                     <label class="cell large-3">
+                        Street address
+                        $PurchaseForm.Fields.dataFieldByName(street)       
+                    </label>
+
+                     <label class="cell large-3">
+                        Suburb
+                        $PurchaseForm.Fields.dataFieldByName(suburb)   
+                    </label>
+
+                    <label class="cell small-6 large-3">
+                        City
+                          $PurchaseForm.Fields.dataFieldByName(city)   
+                    </label>
+
+                    <label class="cell small-6 large-3">
+                        Post code
+                        $PurchaseForm.Fields.dataFieldByName(post-code)  
+                    </label>
+
+                    <label class="cell">
+                        Purchase details
+                        $PurchaseForm.Fields.dataFieldByName(text)       
+                    </label>
+
+                     $PurchaseForm.Fields.FieldByName(SecurityID)
+                    
+                </fieldset>
+            
+                <% loop $PurchaseForm.Actions %>$Field<% end_loop %>
 
             </form>
 
