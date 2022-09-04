@@ -23,6 +23,7 @@ $(document).ready(function () {
     panel1.removeClass("is-active");
     panel2.addClass("is-active");
     panel2.removeAttr("aria-hidden");
+    return
 
   } else if (active === "3") {
 
@@ -42,5 +43,6 @@ $(document).ready(function () {
     panel1.removeClass("is-active");
     panel3.addClass("is-active");
     panel3.removeAttr("aria-hidden");
+    return
   }
 })
