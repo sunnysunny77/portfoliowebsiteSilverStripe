@@ -3,18 +3,18 @@
 namespace pages;
 
 use Page;
-use SilverStripe\AssetAdmin\Forms\UploadField;
-use SilverStripe\Assets\File;
 use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RecordEditor;
 
 class ContactPage extends Page
 {
 
     private static $table_name = 'ContactPage'; 
+   
+    private static $has_many = [
 
-    private static $has_one = [
-
-        'Vcard' => File::class,
+        'ContactObjs' => ConactObj::class,
     ];
 
     private static $db = [
@@ -45,10 +45,15 @@ class ContactPage extends Page
 
         $fields->addFieldToTab('Root.Main', TextField::create('Phone', "Phone"));
 
-        $field = UploadField::create('Vcard', 'Vcard contact information');
-        $field->allowedExtensions = array('vcf');
-
-        $fields->addFieldToTab('Root.Main', $field);
+        $fields->addFieldToTab(
+            'Root.Main',
+            GridField::create(
+                'ContactObjs',
+                'Contact',
+                $this->ContactObjs(),
+                GridFieldConfig_RecordEditor::create()
+            )
+        );
 
         return $fields;
     }
