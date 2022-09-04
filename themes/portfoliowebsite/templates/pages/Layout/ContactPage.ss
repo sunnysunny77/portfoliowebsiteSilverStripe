@@ -39,11 +39,11 @@
 
             <form class="text-center" $HireForm.FormAttributes>
 
+                <b>$HireForm.Message</b>
+
                 <fieldset class="grid-x text-left">
 
                     <legend class="cell">Hire Form</legend>
-
-                    <p class="cell">$HireForm.Message</p>
 
                     <label class="cell small-6 medium-4">
                         First name
