@@ -13,6 +13,8 @@ class CustomSiteConfig extends DataExtension
 
         parent::requireDefaultRecords();
 
+
+        //populate pages
         if (!SiteTree::get_by_link("home")) {
 
             $page = new HomePage;
