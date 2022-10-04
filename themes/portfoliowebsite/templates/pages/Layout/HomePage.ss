@@ -162,6 +162,7 @@
                                 <span class="hide">Eject icon</span>
                             </i>
                         </a>
+                        <!-- display all added objects -->
                         <% loop $StoryboardObjs %>
                         <div>
                     
@@ -187,6 +188,7 @@
                                 <span class="hide">Eject icon</span>
                             </i>
                         </a>
+                        <!-- display all added objects -->
                         <% loop ConceptArtObjs %>
                         <div>
                     
@@ -215,6 +217,7 @@
                                 <span class="hide">Eject icon</span>
                             </i>
                         </a>
+                        <!-- display all added objects -->
                         <% loop IndependantCreationsObjs %>
                         <div>
                      
@@ -273,6 +276,7 @@
                             <span class="hide">Eject icon</span>
                         </i>
                     </a>
+                    <!-- display all added objects -->
                     <% loop TheatreObjs %>
                     <div>
                   
@@ -330,6 +334,7 @@
                             <span class="hide">Eject icon</span>
                         </i>
                     </a>
+                    <!-- display all added objects -->
                     <% loop DesignObjs %>
                     <div>
                    
@@ -409,6 +414,7 @@
                                 <span class="hide">Eject icon</span>
                             </i>
                         </a>
+                        <!-- display all added objects -->
                         <% loop PoemsObjs %>
                         <div>
                         
@@ -437,6 +443,7 @@
                                 <span class="hide">Eject icon</span>
                             </i>
                         </a>
+                        <!-- display all added objects -->
                         <% loop IllustratedPoetryObjs %>
                         <div>
                         
@@ -495,6 +502,7 @@
                             <span class="hide">Eject icon</span>
                         </i>
                     </a>
+                    <!-- display all added objects -->
                     <% loop SculpturesObjs %>
                     <div>
                     
@@ -553,6 +561,7 @@
                             <span class="hide">Eject icon</span>
                         </i>
                     </a>
+                    <!-- display all added objects -->
                     <% loop IllustrationsObjs %>
                     <div>
                     

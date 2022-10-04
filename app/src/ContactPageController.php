@@ -16,6 +16,7 @@ use SilverStripe\Control\Email\Email;
 class ContactPageController extends PageController
 {
 
+    // structure forms and handle forms
     private static $allowed_actions = [
         'HireForm',
         'PurchaseForm',

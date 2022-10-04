@@ -10,6 +10,7 @@ class HomePage extends Page
 {
     private static $table_name = 'HomePage';
 
+    // data objects for page
     private static $has_many = [
 
         'StoryboardObjs' => StoryboardObj::class,
@@ -23,6 +24,7 @@ class HomePage extends Page
         'IllustrationsObjs' => IllustrationsObj::class,
     ];
 
+    // customize Admin UI
     public function getCMSFields()
     {
 

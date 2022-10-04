@@ -6,6 +6,7 @@ use Page;
 class AboutPage extends Page
 {
 
+    // customize Admin UI
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();

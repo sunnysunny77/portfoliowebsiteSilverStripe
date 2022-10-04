@@ -10,6 +10,7 @@ use SilverStripe\ORM\DataObject;
 use SilverStripe\Versioned\Versioned;
 use SilverStripe\Security\Permission;
 
+// The DataObject class represents a single row in a database table
 class IllustratedPoetryObj extends DataObject
 {
 
@@ -68,6 +69,7 @@ class IllustratedPoetryObj extends DataObject
         return $fields;
     }
 
+    // allow non admins
     public function canView($member = null) 
     {
         return Permission::check('CMS_ACCESS_CMSMain', 'any', $member);

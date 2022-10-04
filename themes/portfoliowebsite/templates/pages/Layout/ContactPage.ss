@@ -1,6 +1,9 @@
 <main id="main" class="grid-container grid-y">
     <h2 class="cell text-center medium-text-right">Get in touch</h2>
     <p class="text-center medium-text-right">
+
+        <!-- custom feilds -->
+
         <a href="mailto:$Email">$Email</a>
         <br>
         <a href="tel:$Phone">$Phone</a>
@@ -8,6 +11,7 @@
         <a download href="$Vcard.URL">Download Contact</a>
         <br>
         Please try the forms below
+
     </p>
     <ul class="tabs grid-x align-center text-center" data-tabs id="tabs">
         <li class="small-3 text-center align-self-middle">
@@ -36,6 +40,8 @@
     </ul>
     <div class="tabs-content" data-tabs-content="tabs">
         <div class="tabs-panel is-active" id="panel1">
+
+            <!-- form template -->
 
             <form class="text-center" $HireForm.FormAttributes>
 
@@ -80,6 +86,8 @@
 
         </div>
         <div class="tabs-panel" id="panel2">
+
+             <!-- form template -->
             
             <form class="text-center" $PurchaseForm.FormAttributes>
 
@@ -149,6 +157,8 @@
 
         </div>
         <div class="tabs-panel" id="panel3">
+
+             <!-- form template -->
      
             <form class="text-center" $EnquiryForm.FormAttributes>
 

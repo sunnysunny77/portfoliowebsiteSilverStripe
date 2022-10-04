@@ -12,6 +12,7 @@ class ContactPage extends Page
 
     private static $table_name = 'ContactPage'; 
 
+    //custom fields
     private static $owns = [
 
         'Vcard',
@@ -34,6 +35,7 @@ class ContactPage extends Page
         'Email' => 'example@gmail.com',
     ];
 
+    // customize Admin UI
     public function getCMSFields()
     {
         $fields = parent::getCMSFields();
