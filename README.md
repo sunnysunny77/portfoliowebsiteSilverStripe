@@ -1,3 +1,5 @@
 https://github.com/sunnysunny77/portfoliowebsiteSilverStripe
 <br>
 Upload folder contains the place holder image and the vcf contact card for the contact page feild.
+<br>
+npm install in project root, to install Vivus and enable the logo animation.
