@@ -69,7 +69,6 @@ class ConceptArtObj extends DataObject
         return $fields;
     }
 
-
     // allow non admins
     public function canView($member = null) 
     {
