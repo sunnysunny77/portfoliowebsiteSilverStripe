@@ -6,4 +6,4 @@ Upload folder contains the place holder image and the vcf contact card for the c
 <br>
 npm install in project root, to install Vivus and enable the logo animation.
 <br>
-Debugged with: "lekoala/silverstripe-debugbar": "^2.2" removed due to errors
+Add: "lekoala/silverstripe-debugbar": "^2.2" to composer.json  "require-dev" to enable debugger
