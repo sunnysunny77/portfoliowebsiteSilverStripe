@@ -1,3 +1,0 @@
-da:
-  SilverStripe\MimeValidator\MimeUploadValidator:
-    FAILEDMIMECHECK: 'MIME validering fejlede: {message}'

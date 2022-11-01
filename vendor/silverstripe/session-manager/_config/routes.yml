@@ -1,7 +1,0 @@
----
-Name: session-manager-routes
-After: '#coreroutes'
----
-SilverStripe\Control\Director:
-  rules:
-    'loginsession//$ID': SilverStripe\SessionManager\Controllers\LoginSessionController
