@@ -9,5 +9,3 @@ composer.phar install in project root install silverstripe
 .env holds the database config,
 <br>
 visit site in browser to autoload
-<br>
-Add: "lekoala/silverstripe-debugbar": "^2.2" to composer.json "require-dev" to enable debugger
