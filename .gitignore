@@ -1,4 +1,5 @@
 /silverstripe-cache/
+/vendor/
 /_resources/
 /public/_resources/
 /.graphql-generated/
