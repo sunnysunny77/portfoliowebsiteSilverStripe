@@ -1,3 +1,0 @@
-fi:
-  SilverStripe\MimeValidator\MimeUploadValidator:
-    FAILEDMIMECHECK: 'MIME tarkastus aiheutti virheen: {message}'

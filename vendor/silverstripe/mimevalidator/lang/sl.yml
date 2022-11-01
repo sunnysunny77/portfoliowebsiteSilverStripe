@@ -1,4 +1,0 @@
-sl:
-  SilverStripe\MimeValidator\MimeUploadValidator:
-    FAILEDMIMECHECK: 'Preverjanje MIME formata ni uspelo: {message}'
-    INVALIDMIME: 'Datoteka nima ustrezne pripone (.{extension})'
