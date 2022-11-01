@@ -3,7 +3,3 @@ https://github.com/sunnysunny77/portfoliowebsiteSilverStripe
 https://ss.sunnyhome.site/
 <br>
 Upload folder contains the place holder image and the vcf contact card for the contact page feild.
-<br>
-npm install in project root, to install Vivus and enable the logo animation.
-<br>
-Add: "lekoala/silverstripe-debugbar": "^2.2" to composer.json  "require-dev" to enable debugger
