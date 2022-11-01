@@ -14,6 +14,6 @@ class AboutPageController extends PageController
         parent::init();
         // You can include any CSS or JS required by your project here.
         // See: https://docs.silverstripe.org/en/developer_guides/templates/requirements/
-        Requirements::css("{$this->ThemeDir()}/css/about.css");
+        Requirements::css("css/about.css");
     }
 }
