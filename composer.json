@@ -3,14 +3,23 @@
     "type": "silverstripe-recipe",
     "description": "The SilverStripe Framework Installer",
     "require": {
+        "silverstripe/recipe-plugin": "^1.2",
         "silverstripe/recipe-cms": "~4.11.0@stable",
         "silverstripe/login-forms": "~4.7.0@stable"
     },
     "config": {
         "allow-plugins": {
             "composer/installers": false,
-            "silverstripe/recipe-plugin": false,
+            "silverstripe/recipe-plugin": true,
             "silverstripe/vendor-plugin": false
         }
+    },
+    "extra": {
+        "project-files-installed": [
+            "app/.htaccess",
+            "app/_config.php",
+            "app/_config/mimevalidator.yml",
+            "app/_config/mysite.yml"
+        ]
     }
 }
