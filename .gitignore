@@ -1,4 +1,5 @@
 /silverstripe-cache/
+/vendor/
 /themes/simple/
 /_resources/
 /public/_resources/
