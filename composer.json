@@ -12,5 +12,14 @@
             "silverstripe/recipe-plugin": false,
             "silverstripe/vendor-plugin": true
         }
+    },
+    "autoload": {
+        "classmap": [
+            "app/src/Page.php",
+            "app/src/PageController.php"
+        ],
+        "psr-4": {
+            "SilverStripe\\Pages\\": "app/src/"
+        }
     }
 }
