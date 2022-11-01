@@ -1,6 +1,6 @@
 <?php
 
-namespace SilverStripe\Pages;
+namespace SilverStripe\Lessons;
 
 use PageController;
 use SilverStripe\View\Requirements;

@@ -1,6 +1,6 @@
 <?php
 
-namespace SilverStripe\Pages;
+namespace SilverStripe\Lessons;
 
 use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\ORM\DataExtension;

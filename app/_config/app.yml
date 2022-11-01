@@ -1,5 +1,5 @@
 ---
-Name: portfoliowebsite-app
+Name: myproject
 ---
 SilverStripe\Core\Manifest\ModuleManifest:
   project: app
@@ -17,7 +17,7 @@ SilverStripe\ORM\Connect\MySQLDatabase:
 
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
-    - SilverStripe\pages\CustomSiteConfig
+    - SilverStripe\Lessons\CustomSiteConfig
     
 SilverStripe\CMS\Model\SiteTree:
     create_default_pages: false
