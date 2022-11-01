@@ -1,6 +1,6 @@
 {
-    "name": "silverstripe/lessons",
-    "description": "The silverstripe.org lessons example code",
+    "name": "silverstripe/pages",
+    "description": "The silverstripe.org loader",
     "license": "BSD-3-Clause",
     "authors": [
         {
@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-            "SilverStripe\\Lessons\\": "src/"
+            "SilverStripe\\Pages\\": "src/"
         }
     }
 }
