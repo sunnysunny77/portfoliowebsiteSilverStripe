@@ -26,13 +26,6 @@
             ".htaccess",
             "index.php",
             "web.config"
-        ],
-        "expose": [
-            "themes/portfoliowebsite/css",
-            "themes/portfoliowebsite/js",
-            "themes/portfoliowebsite/images",
-            "node_modules/vivus/dist"
-
         ]
     },
     "config": {

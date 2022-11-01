@@ -1,6 +1,7 @@
 <?php
 
-namespace pages;
+namespace SilverStripe\Pages;
+
 use Page;
 
 class AboutPage extends Page

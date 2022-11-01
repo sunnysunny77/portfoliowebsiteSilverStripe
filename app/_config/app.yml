@@ -17,7 +17,7 @@ SilverStripe\ORM\Connect\MySQLDatabase:
 
 Silverstripe\SiteConfig\SiteConfig:
   extensions:
-    - pages\CustomSiteConfig
+    - SilverStripe\pages\CustomSiteConfig
     
 SilverStripe\CMS\Model\SiteTree:
     create_default_pages: false

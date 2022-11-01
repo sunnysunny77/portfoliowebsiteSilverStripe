@@ -42,7 +42,7 @@
             <img
                 width="515"
                 height="380"
-                src="$ThemeDir/images/about/media.jpg"
+                src="images/about/media.jpg"
                 alt="workspace">
         </div>
         <div class="cell medium-6 grid-x align-justify
@@ -93,7 +93,7 @@
                 class="thumbnail stick"
                 width="370"
                 height="370"
-                src="$ThemeDir/images/about/about-1.jpg"
+                src="images/about/about-1.jpg"
                 alt="slum corner">
         </div>
         <div id="stick-1" class="cell text-center medium-order-1
@@ -196,7 +196,7 @@
                 class="thumbnail stick"
                 width="370"
                 height="370"
-                src="$ThemeDir/images/about/about-2.jpg"
+                src="images/about/about-2.jpg"
                 alt="bard window">
         </div>
         <div id="stick-2" class="cell text-center medium-text-right
@@ -302,7 +302,7 @@
             <img
                 width="378"
                 height="504"
-                src="$ThemeDir/images/about/Jerry.jpg"
+                src="images/about/Jerry.jpg"
                 alt="Jerry">
             <div class="card-section">
                 <h5>Jerry Verschoor</h5>

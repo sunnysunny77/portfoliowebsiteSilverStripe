@@ -1,0 +1,8 @@
+{
+  "name": "silverstripe",
+  "version": "1.0.0",
+  "description": "theme",
+  "dependencies": {
+    "vivus": "^0.4.6"
+  }
+}

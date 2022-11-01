@@ -30,13 +30,13 @@ namespace {
             parent::init();
             // You can include any CSS or JS required by your project here.
             // See: https://docs.silverstripe.org/en/developer_guides/templates/requirements/
-            Requirements::css("{$this->ThemeDir()}/css/foundation.min.css");
-            Requirements::css("{$this->ThemeDir()}/css/icons/foundation-icons.css");
-            Requirements::javascript("{$this->ThemeDir()}/js/vendor/jquery.js");
-            Requirements::javascript("{$this->ThemeDir()}/js/vendor/what-input.js");
-            Requirements::javascript("{$this->ThemeDir()}/js/vendor/foundation.min.js");
+            Requirements::css("css/foundation.min.css");
+            Requirements::css("css/icons/foundation-icons.css");
+            Requirements::javascript("js/vendor/jquery.js");
+            Requirements::javascript("js/vendor/what-input.js");
+            Requirements::javascript("js/vendor/foundation.min.js");
             Requirements::javascript("node_modules/vivus/dist/vivus.min.js");
-            Requirements::javascript("{$this->ThemeDir()}/js/app.js");
+            Requirements::javascript("js/app.js");
         }
     }
 }

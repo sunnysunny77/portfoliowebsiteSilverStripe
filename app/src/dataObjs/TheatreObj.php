@@ -1,6 +1,6 @@
 <?php
 
-namespace pages;
+namespace SilverStripe\Pages;
 
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use SilverStripe\Assets\Image;

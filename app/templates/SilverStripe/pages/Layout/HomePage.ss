@@ -5,14 +5,14 @@
             The Art
             of Jerry Verschoor
         </h2>
-        <img src="$ThemeDir/images/home/sig.png" alt="signature">
+        <img src="images/home/sig.png" alt="signature">
     </section>
     <ul class="cell hover grid-x grid-container text-center menu
         align-center" data-tabs id="tabs">
         <li class="cell small-6 medium-4 tabs-title is-active">
             <a aria-label="Film" class="goto" href="#panel1">
                 <figure class="hover-box">
-                    <img src="$ThemeDir/images/home/film.jpg" alt="Film">
+                    <img src="images/home/film.jpg" alt="Film">
                     <figcaption>
                         <h3>FILM</h3>
                     </figcaption>
@@ -26,7 +26,7 @@
                 data-tabs-target="panel2"
                 href="#panel2">
                 <figure class="hover-box">
-                    <img src="$ThemeDir/images/home/theatre.jpg" alt="Theatre">
+                    <img src="images/home/theatre.jpg" alt="Theatre">
                     <figcaption>
                         <h3>THEATRE</h3>
                     </figcaption>
@@ -40,7 +40,7 @@
                 data-tabs-target="panel3"
                 href="#panel3">
                 <figure class="hover-box">
-                    <img src="$ThemeDir/images/home/design.jpg" alt="Design">
+                    <img src="images/home/design.jpg" alt="Design">
                     <figcaption>
                         <h3>DESIGN</h3>
                     </figcaption>
@@ -54,7 +54,7 @@
                 data-tabs-target="panel4"
                 href="#panel4">
                 <figure class="hover-box">
-                    <img src="$ThemeDir/images/home/poetry.jpg" alt="Poetry">
+                    <img src="images/home/poetry.jpg" alt="Poetry">
                     <figcaption>
                         <h3>POETRY</h3>
                     </figcaption>
@@ -68,7 +68,7 @@
                 data-tabs-target="panel5"
                 href="#panel5">
                 <figure class="hover-box">
-                    <img src="$ThemeDir/images/home/sculptures.jpg"
+                    <img src="images/home/sculptures.jpg"
                         alt="Sculpures">
                     <figcaption>
                         <h3>SCULPUTRES</h3>
@@ -83,7 +83,7 @@
                 data-tabs-target="panel6"
                 href="#panel6">
                 <figure class="hover-box">
-                    <img src="$ThemeDir/images/home/illustrations.jpg"
+                    <img src="images/home/illustrations.jpg"
                         alt="Illustrations">
                     <figcaption>
                         <h3>ILLUSTRATIONS</h3>

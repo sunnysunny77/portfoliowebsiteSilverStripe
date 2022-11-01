@@ -3,7 +3,7 @@ new Vivus(
     "my-svg-m",
     {
         duration: 300,
-        file: "_resources/themes/portfoliowebsite/images/template/logo-m.svg",
+        file: "images/template/logo-m.svg",
     },
     null
 );
@@ -11,7 +11,7 @@ new Vivus(
     "my-svg",
     {
         duration: 300,
-        file: "_resources/themes/portfoliowebsite/images/template/logo.svg",
+        file: "images/template/logo.svg",
     },
     null
 );
