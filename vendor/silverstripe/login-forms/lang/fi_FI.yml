@@ -1,6 +1,0 @@
-fi_FI:
-  SilverStripe\LoginForms:
-    BackToHomePage: ''
-    LOGIN: 'Kirjaudu sisään'
-    SilverstripeDesc: ''
-    SilverstripeTitle: ''
